@@ -23,9 +23,10 @@
 .cabecalho {
   width: 100%;
   height: 60px;
-  padding: 0 20px;
+  padding: 0 60px;
 
   display: flex;
+  flex-wrap: wrap;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
@@ -34,6 +35,7 @@
 .cabecalho span {
   font-weight: 500;
   font-size: 20px;
+  text-transform: lowercase;
 }
 
 .cabecalho nav ul {
@@ -49,4 +51,108 @@
   padding: 10px;
   font-size: 16px;
   text-decoration: none;
+}
+
+.principal {
+  width: 100%;
+}
+
+.principal .banner {
+  width: 100%;
+}
+
+.principal .banner img {
+  width: 100%;
+  height: auto;
+}
+
+.principal .conteudo {
+  width: 100%;
+}
+
+.principal .conteudo .promocao {
+  padding: 30px 60px;
+  border-bottom: 0.5px solid var(--linhas);
+
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.principal .conteudo .promocao h1 {
+  text-transform: uppercase;
+  font-size: 18px;
+}
+
+.principal .conteudo .promocao p {
+  text-transform: lowercase;
+  font-size: 14px;
+}
+
+.principal .conteudo .produtos {
+  padding: 40px 60px;
+
+  display: grid;
+  grid-template-columns: auto auto auto;
+  justify-content: space-between;
+  grid-gap: 20px;
+}
+
+.principal .conteudo .produtos .produto {
+  width: 303px;
+  height: 393px;
+}
+
+.principal .conteudo .produtos .produto img {
+  width: 303px;
+  height: 303px;
+  object-fit: cover;
+}
+
+.principal .conteudo .produtos .produto p {
+  font-size: 14px;
+}
+
+.principal .conteudo .produtos .produto p span {
+  font-size: 18px;
+  margin-left: 5px;
+  font-weight: 600;
+  color: var(--verde);
+}
+
+@media only screen and (max-width: 1068px) {
+  .principal .conteudo .produtos {
+    grid-template-columns: auto auto;
+    justify-content: space-around;
+  }
+}
+
+@media only screen and (max-width: 745px) {
+  .principal .conteudo .produtos {
+    grid-template-columns: auto;
+    justify-content: center;
+  }
+}
+
+@media only screen and (max-width: 422px) {
+  .cabecalho {
+    padding: 0 30px;
+  }
+  .principal .conteudo .produtos {
+    padding: 20px 30px;
+  }
+  .principal .conteudo .produtos .produto {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .principal .conteudo .promocao {
+    padding: 15px 30px;
+  }
+
+  .principal .conteudo .promocao h1 {
+    font-size: 16px;
+  }
 }
