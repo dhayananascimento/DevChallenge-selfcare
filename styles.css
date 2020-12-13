@@ -11,6 +11,9 @@
   padding: 0;
   outline: 0;
   box-sizing: border-box;
+
+  color: var(--preto);
+  font-family: "Lato", sans-serif;
 }
 
 .container {
@@ -122,6 +125,84 @@
   color: var(--verde);
 }
 
+.rodape {
+  background-color: var(--fundo_footer);
+}
+
+.rodape .atendimento-newsletter,
+.rodape .midias-pagameto {
+  padding: 30px 60px;
+  border-top: 1px solid var(--linhas);
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.rodape .atendimento-newsletter ul {
+  list-style: none;
+}
+
+.rodape .atendimento-newsletter ul li {
+  font-size: 16px;
+  font-weight: 600;
+  padding: 5px;
+}
+
+.rodape .atendimento-newsletter ul li a {
+  text-decoration: none;
+}
+
+.rodape .atendimento-newsletter form label {
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.rodape .atendimento-newsletter form div {
+  width: 330px;
+  border: none;
+  margin-top: 10px;
+
+  display: flex;
+  flex-direction: row;
+}
+
+.rodape .atendimento-newsletter form div input {
+  width: 100%;
+  height: 40px;
+  padding: 5px 10px;
+  border: 1px solid var(--linhas);
+}
+
+.rodape .atendimento-newsletter form div button {
+  height: 40px;
+  border: none;
+  cursor: pointer;
+  padding: 10px 20px;
+  color: var(--fundo);
+  border-radius: 0 5px 5px 0;
+  background-color: var(--verde);
+}
+
+.rodape .midias-pagameto {
+  flex-wrap: wrap;
+}
+
+.rodape .midias-pagameto ul {
+  list-style: none;
+}
+
+.rodape .midias-pagameto ul li {
+  display: inline-block;
+  margin: 0 5px;
+}
+
+.rodape .midias-pagameto ul li svg {
+  width: auto;
+  height: 25px;
+}
+
 @media only screen and (max-width: 1068px) {
   .principal .conteudo .produtos {
     grid-template-columns: auto auto;
@@ -134,18 +215,48 @@
     grid-template-columns: auto;
     justify-content: center;
   }
+
+  .rodape .atendimento-newsletter {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .rodape .atendimento-newsletter form {
+    width: 100%;
+    margin-top: 40px;
+  }
+
+  .rodape .atendimento-newsletter form div {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .rodape .atendimento-newsletter form div button {
+    border-radius: 5px;
+    margin-top: 10px;
+    width: 100%;
+  }
 }
 
 @media only screen and (max-width: 422px) {
   .cabecalho {
     padding: 0 30px;
   }
+
   .principal .conteudo .produtos {
+    width: 100%;
     padding: 20px 30px;
   }
+
   .principal .conteudo .produtos .produto {
     width: 100%;
+    height: auto;
     padding: 10px;
+  }
+
+  .principal .conteudo .produtos .produto img {
+    width: 100%;
+    height: 250px;
   }
 
   .principal .conteudo .promocao {
@@ -154,5 +265,10 @@
 
   .principal .conteudo .promocao h1 {
     font-size: 16px;
+  }
+
+  .rodape .atendimento-newsletter,
+  .rodape .midias-pagameto {
+    padding: 15px 30px;
   }
 }
